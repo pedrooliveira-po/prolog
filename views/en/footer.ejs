@@ -1,0 +1,72 @@
+<!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logos">
+          <a href="/" class="logo-link">
+            <img
+              src="/assets/images/logo.webp?v=<%= versao %>"
+              alt="Prolog Soluções Logo"
+            />
+          </a>
+          <a href="/en/academia-prolog" class="logo-link">
+            <img
+              src="/assets/images/prologacademia.png?v=<%= versao %>"
+              alt="Academia Prolog Logo"
+            />
+          </a>
+          <a href="/en/prochain" class="logo-link">
+            <img
+              src="/assets/images/logos/prochainfundo.png?v=<%= versao %>"
+              alt="ProChain Logo"
+            />
+          </a>
+        </div>
+
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <div class="footer-links">
+              <a href="/">ProLog Soluções</a>
+              <a href="/en/trabalhe-conosco">Trabalhe connosco</a>
+              <a href="/en/termos-de-servicos">Termos de serviços</a>
+              <a href="/en/politica-de-privacidade">Política de privacidade</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links flex space-x-4 justify-center mt-4">
+              <a
+                href="https://linkedin.com/company/prologsolucoeslda"
+                aria-label="LinkedIn"
+                class="w-10 h-10 bg-prolog-blue rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition duration-300"
+              >
+                <i class="icon linkedin"></i>
+              </a>
+              <a
+                href="https://instagram.com/prolog_solucoes_lda"
+                aria-label="Instagram"
+                class="w-10 h-10 bg-prolog-orange rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition duration-300"
+              >
+                <i class="icon instagram"></i>
+              </a>
+              <a
+                href="https://facebook.com/prolog.solucoes.lda"
+                aria-label="Facebook"
+                class="w-10 h-10 bg-prolog-blue rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition duration-300"
+              >
+                <i class="icon facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; <%- new Date().getFullYear(); %> ProLog Soluções para Logística.</p>
+      </div>
+    </footer>
+
+    <% jsLinksCentralizados.forEach(link => { %>
+      <script src="<%= link %>"></script>
+    <% }) %>

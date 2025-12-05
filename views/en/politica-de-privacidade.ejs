@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Privacy Policy
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="ProLog Soluções is a leading company in Angola, offering specialized services in logistics, inventory management, and professional training. Enhance your operation with our innovative solutions." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog solutions, logistics angola, inventory management, logistics services, professional training, logistics, consulting, training, Angola, business solutions, 3PL logistics, 4PL logistics, supply chain, logistics operations">
+
+
+        <!-- Open Graph for social media -->
+        <meta property="og:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta property="og:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="ProLog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta name="twitter:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Internal Links -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instructions for indexing -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (ensures this is the official version of the page) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero"></section>
+
+    <section class="main">
+        <h3>Privacy Policy</h3>
+        <p><strong>ProLog Soluções e prestação de serviços Lda</strong> is committed to protecting your privacy. We understand that your personal information is important and we want you to be confident in how we handle your information. This Privacy Policy describes the information we collect, how we use it, and your rights regarding that information.</p>
+        <ul>
+            <li>Information we collect: We collect personal information that you provide to us, such as your name, address, and phone number. We also collect information about your use of our services, such as the time and date of your visits and the pages you visit.</li>
+            <li>How we use your information: We use your personal information to provide and improve our services, to communicate with you, and to comply with legal requirements. We may also use it to personalize your experience and to send you marketing communications.</li>
+            <li>Disclosure of your information: We information to third-party vendors who help us provide our services, such as payment processors and marketing agencies. We may also disclose it to the government and law enforcement agencies as required by law.</li>
+            <li>Your rights: You have the right to access, correct, delete, or restrict the processing of your personal information. You also have the right to object to the processing of your personal information and to file a complaint with a supervisory authority.>Retention of your information: We keep your personal information for as long as necessary to provide our services or as required by law. We may also keep it to resolve disputes, enforce our agreements, and for other legitimate purposes.</li>
+            <li>Security of your information: We take reasonable and appropriate measures to protect your personal information against unauthorized access, disclosure, alteration, and destruction. However, no method of transmission storage is 100% secure and we cannot guarantee its absolute security.</li>
+            <li>Changes to this Privacy Policy: We may update this Privacy Policy periodically to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the revised policy on our website.</li>
+            <li>If you have questions or concerns about this Privacy Policy or about how we handle your personal information, contact</li>
+        </ul>
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

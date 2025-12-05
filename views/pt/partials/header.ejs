@@ -1,0 +1,134 @@
+<style>
+    nav a.ativo {
+        font-weight: bold;
+        color: #ff6600;
+        border-bottom: 2px solid #ff6600;
+    }
+    
+    .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .language-switcher a {
+        color: white;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .language-switcher a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .language-switcher a.current {
+        background-color: #ff6600;
+        font-weight: bold;
+    }
+    
+    .language-switcher span {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    #header .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+</style>
+
+<header id="header" style="background-color: #081751; position: sticky; top: 0;">
+    <div class="content">
+        <div class="logotipo">
+            <a href="/pt/inicio"><img src="/assets/logos/prologTBranco.png" id="logotipo" alt="ProLog Soluções para Logistica"></a>
+        </div>
+        
+        <div class="header-right">
+            <div class="language-switcher">
+                <a href="#" id="lang-en" onclick="switchLanguage('en'); return false;">EN</a>
+                <span>|</span>
+                <a href="#" id="lang-pt" onclick="switchLanguage('pt'); return false;">PT</a>
+            </div>
+            
+            <div class="hamburguer" id="hamburguer">
+                <span id="linha1"></span>
+                <span id="linha2"></span>
+                <span id="linha3"></span>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <h3>A Empresa</h3>
+                    <ul>
+                        <li><a href="/pt/sobre-nos">Sobre Nós</a></li>
+                        <li><a href="/pt/missao-visao-e-valores">Missão, Visão e Valores</a></li>
+                        <li><a href="/pt/responsabilidade-social-e-ambiental">Responsabilidade Social e Ambiental</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Áreas de Negócio</h3>
+                    <ul>
+                        <li><a href="/pt/o-que-fazemos">O Que Fazemos</a></li>
+                        <li><a href="/pt/inventarios-de-activos-patrimoniais">Inventários de Ativos Patrimoniais</a></li>
+                        <li><a href="/pt/logistica-contratual">Logística Contratual</a></li>
+                        <li><a href="/pt/inventario-de-stocks">Inventário de Stocks</a></li>
+                        <li><a href="/pt/operacoes-logisticas-de-campo">Operações Logísticas de Campo</a></li>
+                        <li><a href="/pt/academia-prolog">Academia ProLog</a></li>
+                        <li>
+                            <a href="/pt/prochain">ProChain Retail</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="social-links">
+                <a href="https://linkedin.com/company/prologsolucoeslda"><i class="icon linkedin"></i></a>
+                <a href="https://instagram.com/prolog_solucoes_lda"><i class="icon instagram"></i></a>
+                <a href="https://facebook.com/prolog.solucoes.lda"><i class="icon facebook"></i></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const caminhoAtual = window.location.pathname;
+    const links = document.querySelectorAll("nav a");
+    
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === caminhoAtual || (href !== '/pt/inicio' && caminhoAtual.startsWith(href))) {
+        link.classList.add("ativo");
+      }
+    });
+    
+    const idiomaAtual = caminhoAtual.startsWith('/pt') ? 'pt' : 'en';
+    document.getElementById(`lang-${idiomaAtual}`).classList.add('current');
+  });
+  
+  function switchLanguage(novoIdioma) {
+    const caminhoAtual = window.location.pathname;
+    let novoCaminho;
+    
+    if (caminhoAtual.startsWith('/en/')) {
+      novoCaminho = caminhoAtual.replace('/en/', `/${novoIdioma}/`);
+    } else if (caminhoAtual.startsWith('/pt/')) {
+      novoCaminho = caminhoAtual.replace('/pt/', `/${novoIdioma}/`);
+    } else {
+      novoCaminho = `/${novoIdioma}${caminhoAtual}`;
+    }
+    
+    window.location.href = novoCaminho;
+  }
+</script>

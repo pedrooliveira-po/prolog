@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Assinaturas de Email</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #031764;
+            --secondary: #ffc370;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            padding: 20px;
+            min-height: 100vh;
+            color: var(--dark);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #formulario {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        #formulario:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: var(--gray);
+            pointer-events: none;
+            transition: var(--transition);
+            background-color: white;
+            padding: 0 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 50px;
+            padding: 0 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            background-color: transparent;
+            font-size: 16px;
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--secondary);
+        }
+
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary), #0528a3);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(3, 23, 100, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(3, 23, 100, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(0deg, var(--secondary), #f79000);
+            box-shadow: 0 4px 15px rgba(228, 135, 5, 0.2);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(228, 135, 5, 0.3);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #assinatura {
+            width: 625px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        #assinatura:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        #funcionario {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        #funcionario span {
+            display: block;
+        }
+
+        #funcionario #nome {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        #funcionario #funcao {
+            font-size: 16px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        #funcionario #contacto {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        #funcionario #contacto span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        #funcionario .icon-info {
+            width: 14px;
+        }
+
+        #imagem {
+            display: flex;
+        }
+
+        #imagem #barra {
+            background: linear-gradient(to right, var(--secondary), #ff9500);
+            width: 10px;
+        }
+
+        #imagem #logo {
+            width: 200px;
+            background-color: var(--primary);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #imagem #logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #info {
+            width: calc(100% - 210px);
+            height: 120px;
+            position: relative;
+            padding: 15px 20px;
+        }
+
+        #info .informacoes img {
+            width: 230px;
+            height: auto;
+        }
+
+        #info .imagens {
+            position: absolute;
+            width: 87%;
+            bottom: 7px;
+            left: 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #info .imagens img {
+            width: 150px;
+            height: auto;
+        }
+
+        #info #site {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        #aviso {
+            padding: 15px 2px;
+            color: var(--primary);
+            font-size: 10px;
+            line-height: 1.4;
+            text-align: justify;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .preview-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .instructions {
+            text-align: center;
+            margin-top: 15px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            #formulario {
+                padding: 20px;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            #assinatura {
+                width: 100%;
+                max-width: 625px;
+            }
+            
+            #info .imagens {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            #info .imagens img {
+                width: 120px;
+            }
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Gerador de Assinaturas</h1>
+        <p>Crie sua assinatura de email profissional em poucos segundos</p>
+    </div>
+
+    <div id="formulario">
+        <form>
+            <div class="form-group">
+                <input type="text" id="nomeInput" placeholder=" ">
+                <label for="nomeInput"><i class="fas fa-user"></i> Nome Completo</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="funcaoInput" placeholder=" ">
+                <label for="funcaoInput"><i class="fas fa-briefcase"></i> Função/Cargo</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="emailInput" placeholder=" ">
+                <label for="emailInput"><i class="fas fa-envelope"></i> Email</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="telefoneInput" placeholder=" ">
+                <label for="telefoneInput"><i class="fas fa-phone"></i> Telefone</label>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="limparForm" class="btn btn-secondary">
+                    <i class="fas fa-eraser"></i> Limpar
+                </button>
+                <button type="button" id="gerarImagem" class="btn">
+                    <i class="fas fa-download"></i> Gerar PNG
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <h3 class="preview-title">Pré-visualização da Assinatura</h3>
+    
+    <div class="container">
+        <div id="assinatura">
+            <div id="funcionario">
+                <span id="nome"></span>
+                <span id="funcao"></span>
+                <div id="contacto">
+                    <span id="email">
+                    </span>
+                    <span id="telefone">
+                    </span>
+                </div>
+            </div>
+            <div id="imagem">
+                <span id="barra"></span>
+                <span id="logo">
+                    <img src="/assinatura/logo.svg" alt="Logo da Empresa">
+                </span>
+                <span id="info">
+                    <div class="informacoes">
+                        <img src="/assinatura/infoGerais.svg" alt="Informações Gerais">
+                    </div>
+                    <div class="imagens">
+                        <img src="/assinatura/logoDosOutros.svg" alt="Logo Secundária">
+                        <img src="/assinatura/logosTodos.svg" alt="Logos Adicionais">
+                    </div>
+                    <div id="site">
+                        <span>www.prolog.ao</span>
+                    </div>
+                </span>
+            </div>
+            <div id="aviso">
+                <span>O conteúdo desta mensagem de correio eletrónico é confidencial e destina-se apenas ao destinatário especificado na mensagem. É estritamente proibido partilhar qualquer parte desta mensagem com terceiros, sem o consentimento escrito do remetente. Se recebeu esta mensagem por engano, responda a esta mensagem e proceda à sua eliminação, para que possamos garantir que tal erro não ocorra no futuro.</span>
+            </div>
+        </div>
+    </div>
+    
+    <p class="instructions">Preencha o formulário acima para personalizar sua assinatura e clique em "Gerar PNG" para baixar</p>
+
+<script>
+    const nomeInput = document.querySelector('#nomeInput');
+    const funcaoInput = document.querySelector('#funcaoInput');
+    const emailInput = document.querySelector('#emailInput');
+    const telefoneInput = document.querySelector('#telefoneInput');
+    const nome = document.querySelector('#nome');
+    const funcao = document.querySelector('#funcao');
+    const email = document.querySelector('#email');
+    const telefone = document.querySelector('#telefone');
+    const limparBtn = document.querySelector('#limparForm');
+    
+    nomeInput.addEventListener('input', () => nome.innerText = nomeInput.value);
+    funcaoInput.addEventListener('input', () => funcao.innerText = funcaoInput.value);
+    emailInput.addEventListener('input', () => {
+        email.innerHTML = `<img src="/assinatura/icons_email.svg" class="icon-info"> ${emailInput.value}`;
+    });
+    
+    telefoneInput.addEventListener('input', () => {
+        if(telefoneInput.value != '') {
+            const raw = telefoneInput.value.replace(/\D/g, '');
+            const formatado = raw.replace(/(.{3})/g, '$1 ').trim();
+            telefone.innerHTML = `<img src="/assinatura/icons_telefone.svg" class="icon-info"> (+244) ${formatado}`;
+        } else {
+            telefone.innerHTML = '';
+        }
+    });
+
+    limparBtn.addEventListener('click', () => {
+        nomeInput.value = '';
+        funcaoInput.value = '';
+        emailInput.value = '';
+        telefoneInput.value = '';
+        
+        nome.innerText = '';
+        funcao.innerText = '';
+        email.innerHTML = '<img src="/assinatura/icons_email.svg" class="icon-info"> ';
+        telefone.innerHTML = '<img src="/assinatura/icons_telefone.svg" class="icon-info"> ';
+        
+        nomeInput.dispatchEvent(new Event('input'));
+        funcaoInput.dispatchEvent(new Event('input'));
+    });
+
+    const assinatura = document.querySelector('#assinatura');
+    const btn = document.querySelector('#gerarImagem');
+
+    btn.addEventListener('click', () => {
+        const opcoes = {
+            width: 625,
+            height: assinatura.offsetHeight,
+            style: {
+                transform: 'scale(1)',
+                transformOrigin: 'top left'
+            }
+        };
+        
+        domtoimage.toPng(assinatura, opcoes)
+        .then((dataUrl) => {
+            const nomeFicheiro = String(nomeInput.value || 'assinatura').split(' ').join('');
+            const link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = `Assinatura${nomeFicheiro}.png`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        })
+        .catch((erro) => {
+            alert('Ocorreu um erro ao gerar a imagem');
+            console.log('Ocorreu o seguinte erro: ' + erro);
+        });
+    });
+</script>
+</body>
+</html>

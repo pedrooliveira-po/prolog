@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            O que fazemos
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta property="og:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta name="twitter:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instruções para indexação -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+        <link rel="canonical" href="https://prolog.ao">
+
+        <style>
+            .main {
+                background-image: url(/assets/images/fundo1.jpg); 
+                height: 100dvh; background-size: cover; background-position: center; color: #fff; flex-direction: column;
+                padding: 20% 0 0 5%;
+            }
+            .main::before {
+                content: "";
+                position: absolute;
+                height: 100dvh;
+                top: 15dvh;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+
+            .main > * {
+                position: relative;
+                z-index: 2;
+            }
+
+            .main h1 {
+                color: #fff; text-shadow: 0 5px 5px #000000; 
+                font-size: 28px; position: relative; 
+            }
+
+            .main p {
+                color: #fff; text-shadow: 0 5px 5px #000000; 
+                width: 70%;
+                font-size: 18px; position: relative; 
+            }
+        </style>
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero" style="height: 15dvh; position: relative;"></section>
+
+    <section class="main">
+        <h1>ProLog Soluções para Logistica</h1>
+        <p>Na <strong>ProLog Soluções</strong>, transformamos a logística e a gestão de retalhos em vantagens competitivas para lojas de conveniência em Angola. Com uma abordagem inovadora e uma equipe dedicada, oferecemos serviços que vão desde a execução prática até à gestão estratégica e tecnológica, sempre com custos baixos e foco na eficiência. Seja para abastecer uma loja isolada ou gerir uma rede complexa, estamos preparados para responder aos desafios do mercado angolano com soluções à medida. Conheça nossos serviços e descubra como podemos contribuir para seu negócio.</p>
+    </section>
+
+    <section class="esquerda" data-aos="scaleUp">
+        <div class="image">
+            <img src="/assets/images/l1.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>3PL – Logística Terceirizada com Eficiência.</h1>
+            <p>Na ProLog Soluções, somos especialistas em logística e gestão de retalhos, com um foco especial em lojas de conveniência em Angola. O nosso serviço 3PL (Logística de Terceiros) foi pensado para simplificar e potencializar as operações do seu negócio. Gerimos a recepção de mercadorias com rigor, garantindo que cada produto chegue em perfeitas condições; implementamos um controle de qualidade detalhado para garantir padrões elevados; organizamos o crossdocking para reduzir tempos de espera e acelerar o fluxo de estoque; e garantimos uma distribuição capilar eficiente, com periodicidade adaptada às suas necessidades específicas.
+                <br><br>
+
+            Com uma rede logística robusta que abrange todo o território angolano, de Luanda às províncias mais remotas, oferecemos custos baixos sem comprometer a rapidez ou a fiabilidade. Quer seja preciso abastecer uma única loja ou uma rede inteira, o nosso 3PL fornece uma solução prática e econômica, permitindo-lhe focar no crescimento do seu negócio enquanto nós cuidamos da logística com excelência.</p>
+            <a href="comercial@prolog.ao" class="btn">Peça mais Informações</a>
+        </div>
+
+    </section>
+
+    <section class="direita" data-aos="scaleUp">
+        <div class="image">
+            <img src="/assets/images/l3.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>4PL – Estratégia Integrada para a Sua Cadeia de Abastecimento</h1>
+            <p>A ProLog Soluções posiciona-se como líder em logística e gestão de retalhos em Angola, trazendo uma abordagem estratégica com o nosso 4PL (Fourth-Party Logistics). Este serviço vai além da execução: tornar-nos o seu parceiro na gestão completa da cadeia de abastecimento. Disponibilizamos uma central de compras eficiente, que negoceia as melhores condições para si; assumimos a gestão de fornecedores, garantindo eficiência e qualidade em cada etapa; e integramos todos os processos do nosso 3PL – recepção, controle de qualidade, crossdocking e distribuição capilar – num sistema coeso e otimizado.<br><br>
+            Com custos baixos e uma equipa experiente, criamos soluções personalizadas que respondem aos desafios do mercado angolano, como distâncias longas e infraestruturas variáveis. O nosso 4PL é ideal para redes de lojas de conveniência que procuram alinhar a logística aos seus objetivos estratégicos, oferecendo mais controlo, visibilidade e competitividade num setor em constante evolução.
+                </p>
+            <a href="comercial@prolog.ao" class="btn">Peça mais Informações</a>
+        </div>
+
+    </section>
+
+    <section class="esquerda" data-aos="scaleUp">
+        <div class="image">
+            <img src="/assets/images/f1.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>5PL – Logística Avançada para o Futuro</h1>
+            <p>Como especialistas em logística e gestão de varejo para lojas de conveniência em Angola, o 5PL (Fifth-Party Logistics) da ProLog Soluções é a escolha para quem quer estar na vanguarda. Este serviço combina tudo o que oferecemos no 4PL – central de compras, gestão de fornecedores e os processos logísticos do 3PL – com uma gestão 360º suportada por softwares avançados. Utilizamos tecnologia de última geração para planejar rotas otimizadas, monitorar entregas em tempo real e antecipar necessidades, cobrindo todo o país com custos baixos e eficiência máxima. <br><br>
+            Desenvolvido para redes de conveniência complexas ou negócios multicanais, nosso 5PL transforma dados em decisões inteligentes, reduzindo desperdícios e melhorando o desempenho operacional. Com a ProLog, a sua cadeia de abastecimento não é apenas gerida – é reinventada para o futuro, garantindo que as suas lojas estejam sempre abastecidas e prontas para responder à procura dos clientes.
+                </p>
+            <a href="comercial@prolog.ao" class="btn">Peça mais Informações</a>
+        </div>
+
+    </section>
+
+    <section class="direita" data-aos="scaleUp">
+        <div class="image">
+            <img src="/assets/images/f4.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>Shoppers – O Nosso Serviço Inovador</h1>
+            <p>Na ProLog Soluções, o “Shopper” é um serviço pioneiro que coloca a informação em tempo real ao serviço do seu negócio de retalho em Angola. Projetado especificamente para lojas de conveniência, este serviço não se concentra em entregas, mas sim em produzir dados on-time sobre o ponto de situação de suas operações. Criamos checklists inovadores e personalizados à medida de suas prioridades, realizamos visitas de controle para avaliar o desempenho da loja, monitorizamos a disponibilidade de produtos nas prateleiras e identificamos outros indicadores-chave que precisam de medir – desde a limpeza ao cumprimento de campanhas promocionais. <br><br>
+            Com os “Shoppers”, a ProLog oferece uma visão clara e imediata do estado do seu negócio, permitindo-lhe tomar decisões rápidas e informadas. Seja para garantir padrões de qualidade, otimizar a experiência do cliente ou aumentar as vendas, este serviço combina tecnologia e expertise para dar o controle total, com custos baixos e resultados mensuráveis.
+                </p>
+            <a href="comercial@prolog.ao" class="btn">Peça mais Informações</a>
+        </div>
+
+    </section>
+
+    <section class="esquerda" data-aos="scaleUp">
+        <div class="image">
+            <img src="/assets/images/fundo3.webp?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>Centro de Suporte ao Cliente – Sempre ao Seu Lado</h1>
+            <p>Na ProLog Soluções sabemos que a logística não para – e nosso apoio também não. O nosso centro de suporte ao cliente dedicado opera em horário alargado, garantindo que tenha uma equipa pronta a responder às suas necessidades imediatas, onde quer que esteja em Angola. Desde resolver imprevistos até fornecer atualizações em tempo real sobre suas operações, estamos aqui para garantir que tudo esteja correto sem sobressaltos. Com um atendimento personalizado e focado na eficiência, nosso suporte é mais um motivo para confiar na ProLog como seu parceiro logístico.</p>
+            <a href="comercial@prolog.ao" class="btn">Peça mais Informações</a>
+        </div>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>" defer></script>
+
+    </body>
+</html>

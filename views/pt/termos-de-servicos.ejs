@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Termos de Serviços
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta property="og:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta name="twitter:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instruções para indexação -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+
+<body>
+    <%- include('partials/header') %>
+
+
+    <section class="hero"></section>
+
+    <section class="main">
+        <h2>Termos de serviços Prolog Soluções, prestação de serviços ,Lda</h2>
+        <p>Estes Termos de Serviço, regem o uso dos serviços oferecidos pela nossa página de internet prestadora de serviços. Ao acessar ou usar os nossos serviços, você concorda em cumprir estes Termos. Leia-os atentamente antes de utilizar os nossos serviços.</p>
+
+        <ol>
+            <li>O utilizador deve ter pelo menos 18 anos de idade para utilizar os nossos serviços.</li>
+            <li>O utilizador não pode utilizar os nossos serviços para fins ilegais.</li>
+            <li>Reservamo-nos o direito de modificar ou descontinuar os nossos serviços em qualquer altura.</li>
+            <li>As suas informações pessoais serão mantidas em segurança e confidenciais.</li>
+            <li>Não nos responsabilizamos por quaisquer danos ou perdas incorridos durante a utilização dos nossos serviços.</li>
+            <li>Podemos encerrar a sua conta em qualquer altura por violar os nossos termos de serviço.</li>
+            <li>Quaisquer litígios resultantes da utilização dos nossos serviços serão resolvidos através de arbitragem.</li>
+        </ol>
+
+        <p>Ao utilizar os nossos serviços, o utilizador concorda com estes termos e condições. Se tiver quaisquer questões ou preocupações, não hesite em contactar-nos.</p>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

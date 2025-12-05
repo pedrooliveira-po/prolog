@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Logistica Contratual
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta property="og:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta name="twitter:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instruções para indexação -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero"></section>
+
+    <section class="esquerda">
+        <div class="image">
+            <img src="/assets/images/l1.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>Concentre-se no seu negócio e deixe a Logistica connosco !</h1>
+            <p>Aumentamos a eficiência da sua logística, reduzindo custos e tempo de entrega. Temos soluções personalizadas para sua empresa.</p>
+        </div>
+
+    </section>
+    <section class="direita">
+        <div class="image">
+            <img src="/assets/images/f3.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>Aposte num modelo operacional com a ProLog Soluções.</h1>
+            <p>A logística é um dos principais elementos que podem diferenciar uma empresa da concorrência. Oferecemos vários modelos operacionais diferenciados, baseado em flexibilidade, agilidade, precisão e redução de custos, que se traduzem em vantagens competitivas significativas nos mercados em que a sua empresa atua.</p>
+        </div>
+
+    </section>
+    <section class="esquerda">
+        <div class="image">
+            <img src="/assets/images/l3.png?v=<%= versao %> alt="">
+        </div>
+        <div class="content">
+            <h1>Logística Integrada</h1>
+            <p>A unidade de Logística Integrada da ProLog Soluções, oferece uma ampla variedade de serviços e soluções integradas para a sua Cadeia de Abastecimento, adaptados a cada sector de atividade. Cada Empresa tem as suas praticularidades, a ProLog Soluções respeita as especificidades de cada um dos seus clientes e optimiza os vossos processos logísticos . A Prolog Soluções, também utiliza tendências tecnológicas e melhoria contínua dos processos para melhorar a experiência do cliente e o valor gerado pelos processos operacionais.</p>
+            <a href="comercial@prolog.ao" class="btn">Peça uma cotação</a>
+        </div>
+
+    </section>
+
+    <section class="logisticaInfo">
+        <div class="content">
+            <h2>A ProLog Soluções na Vanguarda da Logística 4PL em Angola.</h2>
+            <p>A logística é uma parte essencial de qualquer negócio, e em Angola, não é diferente. Com a economia do país em crescimento constante e o aumento do comércio internacional, a gestão eficiente da cadeia de abastecimento é fundamental para o sucesso das empresas. É neste contexto que a ProLog Soluções, Lda, uma empresa de logística líder, está determinada a se destacar como líder na revolução da Logística 4PL em Angola.</p>
+            <h2>🔹 O que é a Logística 4PL?</h2>
+            <p>A Logística 4PL, ou Logística de Quarta Parte, representa um nível avançado de gestão de cadeia de abastecimentos, onde uma empresa assume a responsabilidade de coordenar todas as operações logísticas e de fornecimento de outra empresa. Isso vai além da tradicional gestão de armazéns e transporte, envolvendo a gestão estratégica e a otimização de toda a cadeia de abastecimento.</p>
+            <h2>🔹 O Compromisso da ProLog Soluções com a Inovação</h2>
+            <p>A ProLog Soluções sempre esteve na vanguarda da inovação em logística. Com uma equipa experiente e dedicada, a empresa reconhece a necessidade de adaptação constante às necessidades do mercado. Neste espírito, a empresa está investindo recursos significativos para se tornar líder na Logística 4PL em Angola.</p>
+            <h2>🔹 Benefícios da Logística 4PL para Empresas em Angola</h2>
+            <ul>
+                <li><strong>Eficiência Melhorada:</strong> A Logística 4PL visa otimizar todos os processos da cadeia de abastecimentos, o que pode resultar em operações mais eficientes e custos reduzidos.</li>
+                <li><strong>Maior Visibilidade:</strong> A transparência é essencial. A ProLog Soluções oferece aos seus clientes visibilidade completa em tempo real de todas as operações logísticas, permitindo uma tomada de decisão mais informada.</li>
+                <li><strong>Foco no Core Business:</strong> Ao terceirizar a gestão da cadeia de Abastecimentos para especialistas, as empresas em Angola podem se concentrar em suas atividades principais, impulsionando o crescimento e a inovação.</li>
+                <li><strong>Adaptação às Mudanças de Mercado:</strong> Com as rápidas mudanças no mercado global, a ProLog Soluções está posicionada para ajudar as empresas a se adaptarem e prosperarem, independentemente dos desafios.</li>
+                <li><strong>Compromisso com Angola:</strong> A ProLog Soluções está comprometida em apoiar o crescimento econômico de Angola, oferecendo soluções logísticas de classe mundial que atendem às necessidades exclusivas deste mercado em evolução. Com uma visão audaciosa e uma equipa apaixonada, a empresa está pronta para liderar o caminho na Logística 4PL e criar um impacto positivo duradouro no cenário empresarial de Angola.
+                </li>
+            </ul>
+            <h3>Junte-se a nós nesta jornada emocionante de inovação na logística e na construção de um futuro mais eficiente e próspero para Angola. <br><br>
+            Contacte-nos:</h3>
+            <p><a href="mailto:comercial@prolog.ao">comercial@prolog.ao</a><br>
+            Telf: <a href="tel:+244930981759" style="text-decoration: none;">+244 930 981 759</a></p>
+        </div>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

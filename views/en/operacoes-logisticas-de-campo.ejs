@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Fixed Asset Inventories
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="ProLog Soluções is a leading company in Angola, offering specialized services in logistics, inventory management, and professional training. Enhance your operation with our innovative solutions." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog solutions, logistics angola, inventory management, logistics services, professional training, logistics, consulting, training, Angola, business solutions, 3PL logistics, 4PL logistics, supply chain, logistics operations">
+
+
+        <!-- Open Graph for social media -->
+        <meta property="og:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta property="og:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="ProLog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta name="twitter:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Internal Links -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instructions for indexing -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (ensures this is the official version of the page) -->
+        <link rel="canonical" href="https://prolog.ao">
+        
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="main">
+        <p class="introP" style="text-align: center;"><strong>ProLog Soluções</strong> specializes in <strong>Field Logistics Operations</strong>, ensuring total support for activities in remote and hard-to-access locations. With over 25 years of experience in the Angolan market, we develop complete solutions adaptable to the specific needs of each mission.</p>
+        <h2>Logistics Solutions for Challenging Environments</h2>
+        <p>Our team ensures the necessary infrastructure for operations in any point of the territory, including: <br>
+
+            <ul>
+                <li><strong>Off-road vehicles and land transport solutions</strong> to ensure the efficient flow of goods and equipment.</li><br>
+
+                <li><strong>Installation of Camps and Operational Bases</strong> - Assembly of mobile or fixed infrastructures, including accommodation, food, and security for work teams.</li><br>
+
+                <li><strong>Resource and Supply Management</strong> - Planning and distribution of essential goods, such as food, fuel, construction materials, and equipment.</li><br>
+
+                <li><strong>Technical and Communication Support</strong> - Implementation of telecommunications, IT, and monitoring systems to ensure safe and efficient operations.</li><br>
+
+                <li><strong>Operational Security</strong> - Integrated solutions for the protection of people, assets, and information in risk environments.</li>
+            </ul>
+
+        </p>
+            <h2>Proven Experience in Various Sectors</h2>
+            <p><strong>ProLog Soluções</strong> provides support to different industries that need efficient field logistics operations, such as:<br>
+
+                <ul>
+                    <li><strong>Exploration and Extractive Industry</strong> – Support for mining and oil operations in isolated locations.</li><br>
+                    
+                    <li><strong>Environmental and Social Studies</strong> - Logistical support for research teams and environmental impact assessment.</li><br>
+                    
+                    <li><strong>Construction and Infrastructure</strong> – Supply of equipment and logistics management for large civil engineering projects.</li><br>
+                    
+                    <li><strong>Humanitarian and Governmental Missions</strong> – Support for the distribution of humanitarian aid, social programs, and strategic State projects.</li>
+                </ul>
+
+            </p>
+
+                <h2>Why Choose ProLog?</h2>
+
+                <p><strong>✅ Local and international know-how</strong> – Consolidated experience in the Angolan market with global efficiency standards.<br><br>
+                
+                <strong>✅ Adaptability</strong> – Flexible solutions adjusted to any logistical challenge.<br><br>
+                
+                <strong>✅ Robust infrastructure</strong> – Modern equipment and an integrated logistics network to act in any scenario.<br><br>
+                
+                <strong>✅ Commitment to excellence</strong> – Focus on delivering efficient, safe, and sustainable results.<br><br>
+
+                    If your operation needs reliable, efficient, and specialized logistics to act in any environment, <strong>ProLog Soluções is ready to deliver results! <br><br> 
+                    
+                    Contact us and discover how we can make your operation more efficient!</strong></p>
+                    
+                    <center><a href="mailto:comercial@prolog.ao" class="btn">Get in touch</a></center>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

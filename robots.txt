@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.prolog.ao/sitemap.xml

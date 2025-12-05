@@ -1,0 +1,988 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia ProLog - Centro de Formação Profissional de Logística e Supply Chain</title>
+    <style>
+        /* Global Variables */
+        :root {
+            --primary-color: #081751;
+            --primary-light: #051e7f;
+            --accent-color: #FE8834;
+            --white: #fff;
+            --light-bg: #f1f3f9;
+            --light-bg-alt: #f0f0ff;
+            --black: #000;
+            --transparent-primary: rgba(8, 23, 81, 0.1);
+            --transparent-primary-darker: rgba(8, 23, 81, 0.88);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* main */
+        .main {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50" cy="40" r="50"><stop offset="0" stop-color="%23fff" stop-opacity=".1"/><stop offset="1" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><rect width="100" height="20" fill="url(%23a)"/></svg>') repeat-x;
+            opacity: 0.1;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #e8f4f8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3c72;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-gray {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3c72;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content strong {
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        /* Mission Vision Values */
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .mvv-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .mvv-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .mvv-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .values-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .values-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .values-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .values-list strong {
+            color: #1e3c72;
+        }
+
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #ff6b35;
+            position: relative;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .course-number {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .course-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .course-details {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .course-info i {
+            color: #ff6b35;
+            margin-right: 8px;
+        }
+
+        .course-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+
+        .course-enroll-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .course-enroll-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .certification-note {
+            background: linear-gradient(135deg, #e8f5e8, #d4f1d4);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: #2e7d32;
+            margin-top: 40px;
+            border-left: 5px solid #4caf50;
+        }
+
+        /* Methodology */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .methodology-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .methodology-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .methodology-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .methodology-item h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        /* Why Choose */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .benefit-item::before {
+            content: '✔️';
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Final CTA with Integrated Contact */
+        .final-cta {
+            background: linear-gradient(-135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 80px 0;
+            width: 95%;
+            margin: 2.5%;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Integrated Styles */
+        .contact-integrated {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-integrated .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .contact-integrated .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-integrated .contact-item i {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ff6b35;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1rem;
+        }
+
+        .contact-integrated .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-integrated .contact-item a:hover {
+            color: #ffcc00;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .highlighted-link {
+            margin-bottom: 15px;
+            border-left: 3px solid #ff8000ff;
+            padding-left: 10px;
+        }
+
+        .emphasized {
+            font-size: 1.1em;
+            color: #fff ;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .emphasized:hover {
+            color: #ffcc00;
+            transform: translateX(5px);
+        }
+
+        .badge {
+            background-color: #ffcc00;
+            color: #081751;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .coming-soon {
+            opacity: 0.9;
+        }
+
+        .whatsapp-icon {
+            width: 70px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            transform: scale(.8);
+            transition: all .5s ease;
+            z-index: 100;
+        }
+
+        .whatsapp-icon:hover {
+            transform: scale(1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            /* Responsive for integrated contact */
+            .contact-integrated {
+                padding: 15px;
+            }
+            
+            .contact-integrated .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+            
+            .contact-integrated .contact-item i {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            
+            .final-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://www.prolog.ao/assets/css/menu&footer.css?v=" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <% jsLinksCentralizados.forEach(link => { %>
+        <script src="<%= link %>"></script>
+    <% }) %>
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+</head>
+<body onload="document.getElementById('ano').innerText = new Date().getFullYear();">
+
+<!-- Header -->
+<header id="header" class="bg-[#081751]">
+    <div class="content">
+
+        <div class="logotipo">
+            <a href="/"><img src="https://www.prolog.ao/assets/logos/academiaTBranco.png" alt="ProLog Soluções para Logística"></a>
+        </div>
+        <div class="hamburguer" id="hamburguer">
+            <span id="linha1"></span>
+            <span id="linha2"></span>
+            <span id="linha3"></span>
+        </div>
+
+        <nav id="navMenu" class="hidden">
+            <ul>
+                <li class="highlighted-link">
+                    <a href="https://www.prolog.ao" class="emphasized">
+                        <!--<span class="link-icon">→</span>-->
+                        Ir para a ProLog Soluções para Logística
+                    </a>
+                </li>
+                <li class="highlighted-link">
+                    <a href="https://www.prochain.ao" class="emphasized coming-soon">
+                        <!--<span class="link-icon">→</span>-->
+                        <span>Ir para a </span> ProChain Retalho
+                    </a>
+                </li>
+            </ul>
+            <div class="social-links">
+                <a href="https://linkedin.com/company/prologsolucoeslda"><i class="icon linkedin"></i></a>
+                <a href="https://instagram.com/prolog_solucoes_lda"><i class="icon instagram"></i></a>
+                <a href="https://facebook.com/prolog.solucoes.lda"><i class="icon facebook"></i></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-content">
+                <h1>Academia ProLog</h1>
+                <p class="subtitle">Centro de Formação Profissional de Logística e Supply Chain</p>
+                <p class="tagline">"Formar hoje os profissionais que vão movimentar o amanhã."</p>
+                <div class="cta-buttons">
+                    <a href="#cursos" class="btn btn-primary">Ver Cursos</a>
+                    <a href="mailto:academia@prolog.ao?subject=Inscrição" class="btn btn-secondary">Inscreva-se Já</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secção sobre -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Sobre a Academia</h2>
+            <div class="about-content">
+                <p>A <strong>Academia ProLog</strong> é um <strong>centro de formação profissional especializado em Logística e Supply Chain</strong>, criado para preparar operadores, técnicos e gestores capazes de responder aos desafios do sector em Angola.</p>
+                
+                <p>As formações são <strong>certificadas pelo INEFOP e reconhecido pela ANPG para indústria de Oil & Gas</strong>, assegurando qualidade, rigor e reconhecimento nacional. Com uma abordagem <strong>prática e realista</strong>, baseada em cenários reais de operações, a Academia garante que cada formando adquire competências aplicáveis desde o primeiro dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão, Visão, Valores -->
+    <section class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Missão, Visão e Valores</h2>
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <h3>🎯 Missão</h3>
+                    <p>Formar e capacitar profissionais de Logística e Supply Chain em Angola, através de programas práticos e certificados, que respondam às necessidades reais do mercado e contribuam para o fortalecimento do ecossistema logístico nacional.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <h3>🚀 Visão</h3>
+                    <p>Ser a <strong>referência nacional na formação em Logística e Supply Chain</strong>, reconhecida pela qualidade, pela ligação ao mercado e pelo impacto na valorização da produção e da distribuição em Angola.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <h3>💎 Valores</h3>
+                    <ul class="values-list">
+                        <li><strong>Excelência</strong> – garantir qualidade em todos os programas formativos.</li>
+                        <li><strong>Praticidade</strong> – ensinar com base em cenários e operações reais.</li>
+                        <li><strong>Inovação</strong> – aplicar metodologias modernas de ensino e logística.</li>
+                        <li><strong>Compromisso com Angola</strong> – desenvolver talentos locais e reduzir a dependência externa.</li>
+                        <li><strong>Integridade</strong> – atuar com ética, transparência e responsabilidade.</li>
+                        <li><strong>Sustentabilidade</strong> – promover soluções logísticas que valorizem a produção nacional.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção cursos -->
+    <section id="cursos" class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Os Nossos Cursos Profissionais</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 50px;">A <strong>Academia ProLog</strong> disponibiliza actualmente <strong>5 cursos profissionais certificados</strong>:</p>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-number">1</div>
+                    <h3>Gestão de Transporte e Frota</h3>
+                    <p>Planeamento e execução de fluxos de mercadorias, assegurando custos competitivos, prazos e qualidade de serviço.</p>
+                    <div class="course-details">
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 20 Horas</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-tag"></i></span>
+                            <span class="course-price">150.000,00 Kz</span>
+                        </div>
+                        <a href="mailto:academia@prolog.ao?subject=Inscrição - Gestão de Transporte e Frota" class="course-enroll-btn">Inscrever-se</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-number">2</div>
+                    <h3>Gestão de Armazenamento</h3>
+                    <p>Organização, eficiência e segurança nas operações de armazenagem.</p>
+                    <div class="course-details">
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 20 Horas</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-tag"></i></span>
+                            <span class="course-price">150.000,00 Kz</span>
+                        </div>
+                        <a href="mailto:academia@prolog.ao?subject=Inscrição - Gestão de Armazenamento" class="course-enroll-btn">Inscrever-se</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">3</div>
+                    <h3>Gestão de Stock</h3>
+                    <p>Técnicas de previsão, controlo e otimização de inventários.</p>
+                    <div class="course-details">
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 20 Horas</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-tag"></i></span>
+                            <span class="course-price">150.000,00 Kz</span>
+                        </div>
+                        <a href="mailto:academia@prolog.ao?subject=Inscrição - Gestão de Stock" class="course-enroll-btn">Inscrever-se</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">4</div>
+                    <h3>Logística Integrada</h3>
+                    <p>Visão global e articulada da cadeia de abastecimento.</p>
+                    <div class="course-details">
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 30 Horas</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-tag"></i></span>
+                            <span class="course-price">195.000,00 Kz</span>
+                        </div>
+                        <a href="mailto:academia@prolog.ao?subject=Inscrição - Logística Integrada" class="course-enroll-btn">Inscrever-se</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">5</div>
+                    <h3>Agro Logística</h3>
+                    <p>Curso dedicado ao escoamento, armazenagem e distribuição de produtos agrícolas, reforçando a valorização da produção nacional e a ligação eficiente entre campo e mercado.</p>
+                    <div class="course-details">
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 120 Horas</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-tag"></i></span>
+                            <span class="course-price">Contactar</span>
+                        </div>
+                        <a href="mailto:academia@prolog.ao?subject=Inscrição - Agro Logística" class="course-enroll-btn">Inscrever-se</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification-note">
+                👉 <strong>Todos os cursos são certificados pelo INEFOP e reconhecido pela ANPG para indústria de Oil & Gas.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia -->
+    <section class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Metodologia de Ensino</h2>
+            <div class="methodology-grid">
+                <div class="methodology-item">
+                    <div class="methodology-icon">📌</div>
+                    <h4>Formação Prática e Realista</h4>
+                    <p>Casos reais e exercícios aplicados</p>
+                </div>
+                
+                <div class="methodology-item">
+                    <div class="methodology-icon">👨‍🏫</div>
+                    <h4>Instrutores Especializados</h4>
+                    <p>Profissionais com experiência no sector</p>
+                </div>
+                
+                <div class="methodology-item">
+                    <div class="methodology-icon">🔧</div>
+                    <h4>Aprender Fazendo</h4>
+                    <p>Simulação de operações e ligação direta ao mercado de trabalho</p>
+                </div>
+                
+                <div class="methodology-item">
+                    <div class="methodology-icon">🏆</div>
+                    <h4>Reconhecimento Oficial</h4>
+                    <p>Certificações que valorizam a carreira</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Porquê nos escolher -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Porquê escolher a Academia ProLog?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">Centro especializado em Logística e Supply Chain</div>
+                <div class="benefit-item">Cursos certificados e reconhecidos</div>
+                <div class="benefit-item">Conteúdos alinhados com as exigências do mercado</div>
+                <div class="benefit-item">Metodologia prática e aplicável</div>
+                <div class="benefit-item">Preparação para carreiras no sector logístico</div>
+                <div class="benefit-item">Compromisso com a valorização da produção e distribuição em Angola</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>🎯 Invista no seu futuro. Faça parte da nova geração de profissionais de Logística e Supply Chain em Angola.</h2>
+            
+            <!-- Informações de Contacto Integradas -->
+            <div class="contact-integrated">
+                <!-- <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Benfica Business Park (Rua Fidel de Castro) / Luanda</span>
+                </div> -->
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+244930981759">+244 930 981 759</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:academia@prolog.ao">academia@prolog.ao</a>
+                </div>
+            </div>
+            
+            <!-- Botões de Ação -->
+            <div class="final-cta-buttons">
+                <a href="#cursos" class="btn btn-primary">Ver Detalhes dos Cursos</a>
+                <a href="mailto:academia@prolog.ao?subject=Inscrição" class="btn btn-secondary">Contactar a Academia</a>
+            </div>
+        </div>
+    </section>
+    
+    <a href="https://wa.me/244930981759" class="whatsapp-icon">
+        <?xml version="1.0" encoding="UTF-8"?><svg data-name="Camada 1"id="Camada_1"version="1.1"viewBox="0 0 800 800"xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style>.cls-1{fill:url(#Gradiente_sem_nome_6)}.cls-1,.cls-2{stroke-width:0}.cls-2{fill:#fff}</style><linearGradient data-name="Gradiente sem nome 6"gradientUnits="userSpaceOnUse"id="Gradiente_sem_nome_6"x1="400"x2="400"y1="1"y2="799"><stop offset="0"stop-color="#61fd7d"/><stop offset="1"stop-color="#2bb826"/></linearGradient></defs><rect class="cls-1"height="798"rx="399"ry="399"width="800"x="0"y="1"/><path class="cls-2"d="M535,452.8c-1.6-2.6-5.7-4.2-12-7.3-6.3-3.1-37-18.3-42.8-20.4-5.7-2.1-9.9-3.1-14.1,3.1-4.2,6.3-16.2,20.4-19.8,24.5-3.6,4.2-7.3,4.7-13.6,1.6-6.3-3.1-26.4-9.7-50.3-31-18.6-16.6-31.2-37.1-34.8-43.3-3.6-6.3-.4-9.6,2.7-12.8,2.8-2.8,6.3-7.3,9.4-11,3.1-3.6,4.2-6.3,6.3-10.4,2.1-4.2,1-7.8-.5-11-1.6-3.1-14.1-33.9-19.3-46.4-5.1-12.2-10.2-10.6-14.1-10.7-3.6-.2-7.8-.2-12-.2s-11,1.6-16.7,7.8c-5.7,6.3-21.9,21.4-21.9,52.2s22.4,60.5,25.6,64.7c3.1,4.2,44.1,67.4,106.9,94.5,14.9,6.4,26.6,10.3,35.7,13.2,15,4.8,28.6,4.1,39.4,2.5,12-1.8,37-15.1,42.2-29.7,5.2-14.6,5.2-27.1,3.6-29.8ZM535,452.8c-1.6-2.6-5.7-4.2-12-7.3-6.3-3.1-37-18.3-42.8-20.4-5.7-2.1-9.9-3.1-14.1,3.1-4.2,6.3-16.2,20.4-19.8,24.5-3.6,4.2-7.3,4.7-13.6,1.6-6.3-3.1-26.4-9.7-50.3-31-18.6-16.6-31.2-37.1-34.8-43.3-3.6-6.3-.4-9.6,2.7-12.8,2.8-2.8,6.3-7.3,9.4-11,3.1-3.6,4.2-6.3,6.3-10.4,2.1-4.2,1-7.8-.5-11-1.6-3.1-14.1-33.9-19.3-46.4-5.1-12.2-10.2-10.6-14.1-10.7-3.6-.2-7.8-.2-12-.2s-11,1.6-16.7,7.8c-5.7,6.3-21.9,21.4-21.9,52.2s22.4,60.5,25.6,64.7c3.1,4.2,44.1,67.4,106.9,94.5,14.9,6.4,26.6,10.3,35.7,13.2,15,4.8,28.6,4.1,39.4,2.5,12-1.8,37-15.1,42.2-29.7,5.2-14.6,5.2-27.1,3.6-29.8ZM586,216.1c-47.3-47.3-110.2-73.4-177.2-73.4-138,0-250.4,112.3-250.4,250.3,0,44.1,11.5,87.2,33.4,125.2l-35.5,129.7,132.8-34.8c36.6,19.9,77.8,30.4,119.7,30.5h.1c138,0,250.4-112.3,250.4-250.4,0-66.9-26-129.8-73.3-177.1ZM408.9,601.3h0c-37.4,0-74-10-105.9-29l-7.6-4.5-78.8,20.7,21-76.8-4.9-7.9c-20.8-33.1-31.8-71.4-31.8-110.7,0-114.7,93.4-208.1,208.3-208.1,55.6,0,107.9,21.7,147.2,61,39.3,39.3,60.9,91.6,60.9,147.2,0,114.7-93.4,208.1-208.2,208.1ZM523,445.5c-6.3-3.1-37-18.3-42.8-20.4-5.7-2.1-9.9-3.1-14.1,3.1-4.2,6.3-16.2,20.4-19.8,24.5-3.6,4.2-7.3,4.7-13.6,1.6-6.3-3.1-26.4-9.7-50.3-31-18.6-16.6-31.2-37.1-34.8-43.3-3.6-6.3-.4-9.6,2.7-12.8,2.8-2.8,6.3-7.3,9.4-11,3.1-3.6,4.2-6.3,6.3-10.4,2.1-4.2,1-7.8-.5-11-1.6-3.1-14.1-33.9-19.3-46.4-5.1-12.2-10.2-10.6-14.1-10.7-3.6-.2-7.8-.2-12-.2s-11,1.6-16.7,7.8c-5.7,6.3-21.9,21.4-21.9,52.2s22.4,60.5,25.6,64.7c3.1,4.2,44.1,67.4,106.9,94.5,14.9,6.4,26.6,10.3,35.7,13.2,15,4.8,28.6,4.1,39.4,2.5,12-1.8,37-15.1,42.2-29.7,5.2-14.6,5.2-27.1,3.6-29.8-1.6-2.6-5.7-4.2-12-7.3Z"/></svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logos">
+                <a href="/" class="logo-link">
+                    <img src="https://www.prolog.ao/assets/images/logo.webp?v=01.01.05" alt="Prolog Soluções Logo">
+                </a>
+                <a href="/academia-prolog" class="logo-link">
+                    <img src="https://www.prolog.ao/assets/images/prologacademia.png?v=01.01.05" alt="Academia Prolog Logo">
+                </a>
+                <a href="/prochain" class="logo-link">
+                    <img src="https://www.prolog.ao/assets/logos/prochainfundo.png?v=01.01.05" alt="Academia Prolog Logo">
+                </a>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <div class="footer-links">
+                        <a href="/">ProLog Soluções</a>
+                        <a href="trabalhe-conosco">Trabalhe connosco</a>
+                        <a href="termos-de-servicos">Termos de serviços</a>
+                        <a href="politica-de-privacidade">Política de privacidade</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links flex space-x-4 justify-center mt-4">
+                        <a href="https://linkedin.com/company/prologsolucoeslda" aria-label="LinkedIn" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/prolog_solucoes_lda" aria-label="Instagram" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/prolog.solucoes.lda" aria-label="Facebook" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Todos os cursos certificados pelo INEFOP e reconhecido pela ANPG para indústria de Oil & Gas</p>
+            <p>&copy; <span id="ano"></span> ProLog Soluções para Logística.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const estreia = new Date('2025-10-01');
+            const agora = new Date();
+            if(agora < estreia) {
+                document.querySelector('.coming-soon span').style.display = 'none';
+            } else {
+                const badge = document.querySelector('.badge');
+                if (badge) {
+                badge.parentNode.removeChild(badge);
+                }
+            }
+        })
+        
+        document.querySelector('#hamburguer').addEventListener('click', () => {
+            document.querySelector('header').classList.toggle('menu')
+            if(document.querySelector('header').classList.contains('menu')) {
+                document.querySelector('#navMenu').classList.remove('hidden');
+                document.querySelector('#navMenu').classList.remove('block');
+            } else {
+                document.querySelector('#navMenu').classList.remove('block');
+                document.querySelector('#navMenu').classList.remove('hidden');
+            }
+        })
+        const imagens = document.querySelectorAll('img');
+        
+        imagens.forEach((imagem) => {
+            imagem.addEventListener('click', () => {
+                const divImagem = document.createElement('div');
+                divImagem.className = 'w-full h-full bg-black/80 fixed inset-0 z-10000 flex items-center justify-center';
+                
+                const clone = imagem.cloneNode(true);
+                clone.className = 'max-w-full max-h-[90vh] object-contain';
+                divImagem.append(clone);
+                
+                divImagem.addEventListener('click', (e) => {
+                    if (e.target === divImagem) {
+                        divImagem.remove();
+                    }
+                });
+        
+                document.body.prepend(divImagem);
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.mvv-card, .course-card, .methodology-item, .benefit-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

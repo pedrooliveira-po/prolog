@@ -1,0 +1,152 @@
+<style>
+    nav a.ativo {
+        font-weight: bold;
+        color: #ff6600;
+        border-bottom: 2px solid #ff6600;
+    }
+    
+    .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .language-switcher a {
+        color: white;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .language-switcher a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .language-switcher a.current {
+        background-color: #ff6600;
+        font-weight: bold;
+    }
+    
+    .language-switcher span {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    #header .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .header-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-5%);
+    }
+    
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+</style>
+
+<header id="header" style="position: sticky; top: 0; height: 100px;">
+    <div class="content">
+        <div class="logotipo" style="width: 150px;">
+            <a href="/pt/inicio"><img src="/assets/logos/prologTBranco.png" id="logotipo" alt="ProLog Soluções para Logistica"></a>
+        </div>
+        
+        <div class="header-center">
+            <div class="language-switcher">
+                <a href="#" id="lang-en" onclick="switchLanguage('en'); return false;">EN</a>
+                <span>|</span>
+                <a href="#" id="lang-pt" onclick="switchLanguage('pt'); return false;">PT</a>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <div class="hamburguer" id="hamburguer" style="top: 50%;">
+                <span id="linha1"></span>
+                <span id="linha2"></span>
+                <span id="linha3"></span>
+            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <h3>The Company</h3>
+                    <ul>
+                        <li><a href="/en/sobre-nos">About Us</a></li>
+                        <li><a href="/en/missao-visao-e-valores">Mission, Vision & Values</a></li>
+                        <li><a href="/en/responsabilidade-social-e-ambiental">Social & Environmental Responsibility</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Business Areas</h3>
+                    <ul>
+                        <li><a href="/en/o-que-fazemos">What We Do</a></li>
+                        <li><a href="/en/inventarios-de-activos-patrimoniais">Fixed Asset Inventories</a></li>
+                        <li><a href="/en/logistica-contratual">Contract Logistics</a></li>
+                        <li><a href="/en/inventario-de-stocks">Stock Inventories</a></li>
+                        <li><a href="/en/operacoes-logisticas-de-campo">Field Logistics Operations</a></li>
+                        <li><a href="/en/academia-prolog">ProLog Academy</a></li>
+                        <li>
+                            <a href="/en/prochain">ProChain Retail
+                                <%  
+                                    const agora = new Date();
+                                    if(agora < new Date('2025-11-01')) {
+                                %>
+                                <span style="color: orange;">(Coming Soon)</span>
+                                <%  
+                                    } 
+                                %>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="social-links">
+                <a href="https://linkedin.com/company/prologsolucoeslda"><i class="icon linkedin"></i></a>
+                <a href="https://instagram.com/prolog_solucoes_lda"><i class="icon instagram"></i></a>
+                <a href="https://facebook.com/prolog.solucoes.lda"><i class="icon facebook"></i></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const caminhoAtual = window.location.pathname;
+    const links = document.querySelectorAll("nav a");
+    
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === caminhoAtual || (href !== '/en/inicio' && caminhoAtual.startsWith(href))) {
+        link.classList.add("ativo");
+      }
+    });
+    
+    const idiomaAtual = caminhoAtual.startsWith('/pt') ? 'pt' : 'en';
+    document.getElementById(`lang-${idiomaAtual}`).classList.add('current');
+  });
+  
+  function switchLanguage(novoIdioma) {
+    const caminhoAtual = window.location.pathname;
+    let novoCaminho;
+    
+    if (caminhoAtual.startsWith('/en/')) {
+      novoCaminho = caminhoAtual.replace('/en/', `/${novoIdioma}/`);
+    } else if (caminhoAtual.startsWith('/pt/')) {
+      novoCaminho = caminhoAtual.replace('/pt/', `/${novoIdioma}/`);
+    } else {
+      novoCaminho = `/${novoIdioma}${caminhoAtual}`;
+    }
+    
+    window.location.href = novoCaminho;
+  }
+</script>

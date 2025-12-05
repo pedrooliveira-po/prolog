@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Missão Visão Valores
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta property="og:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta name="twitter:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/sobre-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instruções para indexação -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero"></section>
+
+    <section class="missao">
+        <div class="content">
+            <h1>A nossa Missão</h1>
+            <p>Ser o parceiro estratégico de excelência na gestão logística em Angola, oferecendo soluções inovadoras e eficientes que impulsionam o crescimento sustentável dos nossos clientes e do ecossistema logístico nacional.</p>
+            <h1>A nossa Visão</h1>
+            <p>Liderar a transformação do setor logístico em Angola, consolidando-nos como a principal referência em serviços Logísticos, promovendo a digitalização, eficiência operacional e sustentabilidade nas cadeias de abastecimento.</p>
+            <h1>Os nossos valores:</h1>
+            <p id="valores">A ProLog enquanto empresa do sector logístico tem como valores os seguintes: <br><br>
+                a)	Compromisso com a Excelência – Actuamos com rigor, eficiência e profissionalismo, garantindo sempre os melhores resultados para os nossos clientes;<br><br>
+                b)	Inovação e Sustentabilidade – Desenvolvemos soluções modernas e sustentáveis que optimizam os processos logísticos e reduzem impactos ambientais;<br><br>
+                c)	Parceria e Confiança – Construímos relações sólidas e transparentes com clientes, fornecedores e colaboradores, baseadas na confiança e no respeito mútuo;<br><br>
+                d)	Desenvolvimento Local – Apostamos na formação e capacitação de talentos angolanos, contribuindo para o crescimento do setor e da economia nacional;<br><br>
+                e)	Agilidade e Flexibilidade – Adaptamo-nos rapidamente às mudanças do mercado, garantindo soluções eficazes e personalizadas para cada cliente.<br><br>
+            </p>
+        </div>
+    </section>
+
+    <div class="imagem">
+        <img src="/assets/images/missao.webp?v=<%= versao %>">
+    </div>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

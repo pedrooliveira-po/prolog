@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Política de privacidade
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta property="og:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta name="twitter:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instruções para indexação -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero"></section>
+
+    <section class="main">
+        <h3>Política de Privacidade</h3>
+        <p><strong>A Prolog Soluções e prestação de serviços Lda</strong>, está empenhada em proteger a sua privacidade. Compreendemos que a sua informação pessoal é importante e queremos que esteja confiante no tratamento que damos à sua informação. Esta Política de Privacidade descreve as informações que recolhemos, como as utilizamos e os seus direitos relativamente a essas informações.</p>
+        <ul>
+            <li>Informações que recolhemos: Recolhemos informações pessoais que o utilizador nos fornece, tais como o nome, a morada, o endereço de correio eletrónico e o número de telefone. Também recolhemos informações sobre a sua utilização dos nossos serviços, tais como a hora e a data das suas visitas e as páginas que visita.</li>
+            <li>Como utilizamos as suas informações: Utilizamos as suas informações pessoais para fornecer e melhorar os nossos serviços, para comunicar com o utilizador e para cumprir os requisitos legais. Podemos também utilizá-las para personalizar a sua experiência e para lhe enviar comunicações de marketing.</li>
+            <li>Divulgação das suas informações: Podemos divulgar as suas informações pessoais a fornecedores terceiros que nos ajudam a fornecer os nossos serviços, tais como processadores de pagamentos e agências de marketing. Também podemos divulgá-las ao governo e a agências de aplicação da lei, conforme exigido por lei.</li>
+            <li>Os seus direitos: O utilizador tem o direito de aceder, corrigir, eliminar ou restringir o processamento das suas informações pessoais. Também tem o direito de se opor ao processamento das suas informações pessoais e de apresentar uma queixa a uma autoridade de controlo.</li>
+            <li>Retenção das suas informações: Conservamos as suas informações pessoais durante o tempo necessário para prestar os nossos serviços ou conforme exigido por lei. Podemos também conservá-las para resolver litígios, fazer cumprir os nossos acordos e para outros fins legítimos.</li>
+            <li>Segurança das suas informações: Tomamos medidas razoáveis e adequadas para proteger as suas informações pessoais contra acesso, divulgação, alteração e destruição não autorizados. No entanto, nenhum método de transmissão através da Internet ou de armazenamento eletrónico é 100% seguro e não podemos garantir a sua segurança absoluta.</li>
+            <li>Alterações a esta Política de Privacidade: Podemos atualizar esta Política de Privacidade periodicamente para refletir alterações nas nossas práticas ou por outras razões operacionais, legais ou regulamentares. Notificá-lo-emos de quaisquer alterações materiais, publicando a política revista no nosso Web site.</li>
+            <li>Se tiver dúvidas ou preocupações sobre esta Política de Privacidade ou sobre o tratamento das suas informações pessoais, contacte-nos através do endereço info@prolog.ao</li>
+        </ul>
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

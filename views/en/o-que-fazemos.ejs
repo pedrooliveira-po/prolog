@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            What We Do
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="ProLog Soluções is a leading company in Angola, offering specialized services in logistics, inventory management, and professional training. Enhance your operation with our innovative solutions." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog solutions, logistics angola, inventory management, logistics services, professional training, logistics, consulting, training, Angola, business solutions, 3PL logistics, 4PL logistics, supply chain, logistics operations">
+
+
+        <!-- Open Graph for social media -->
+        <meta property="og:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta property="og:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="ProLog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta name="twitter:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Internal Links -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instructions for indexing -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (ensures this is the official version of the page) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+
+    <section class="hero"></section>
+
+    <section class="esquerda">
+        <div class="image">
+            <img src="/assets/images/f1.png?v=<%= versao %>" alt="">
+        </div>
+        <div class="content">
+            <h1>ProLog Soluções e prestação de serviços, Lda.</h1>
+            <p>Are you looking to improve the efficiency and effectiveness of your company in the area of logistics and supply chain?<br><br>
+
+                Count on ProLog Soluções e prestação de serviços, Lda. We are a company specialized in offering personalized logistics solutions for companies seeking excellence in their logistics and supply chain processes. Our highly qualified and experienced team is ready to assist you in identifying and implementing the best practices and strategies for the success of your business. With ProLog Soluções, your company will have a committed partner to achieve positive results and generate competitive advantages in the market. Contact us and discover how we can help you optimize your logistics and supply chain. Together, we will take your company to a new level of excellence!</p>
+            <a href="comercial@prolog.ao" class="btn">Request More Information</a>
+        </div>
+
+    </section>
+
+    <section class="esquerda">
+        <div class="image">
+            <img src="/assets/images/f2.png?v=<%= versao %>" alt="">
+        </div>
+        <div class="content">
+            <h1>Provision of Logistics Services</h1>
+            <p>As your company grows, there comes a point where handling order shipments is no longer financially sustainable. It will demand too much time and resources, and the focus will be diverted from growth and your sales. This is when you need an external logistics provider. ProLog Soluções is a partner with a wide range of logistics solutions and can guide you through the entire process. Together, we will find a service configuration that is optimized for your company.</p>
+            <a href="comercial@prolog.ao" class="btn">Request More Information</a>
+        </div>
+
+    </section>
+
+    <section class="direita">
+        <div class="image">
+            <img src="/assets/images/f3.png?v=<%= versao %>" alt="">
+        </div>
+        <div class="content">
+            <h1>Contract Logistics 3PL / 4PL</h1>
+            <p>Services we provide:</p>
+            <ul>
+                <li>Order Reception</li>
+                <li>Goods Reception</li>
+                <li>Warehousing</li>
+                <li>Packaging Preparation</li>
+                <li>Order Preparation</li>
+                <li>Transportation of dry and refrigerated goods</li>
+                <li>Capillary Distribution</li>
+                <li>Returns Processing</li>
+            </ul>
+            <a href="comercial@prolog.ao" class="btn">Request More Information</a>
+        </div>
+
+    </section>
+
+    <section class="direita">
+        <div class="image">
+            <img src="/assets/images/f4.png?v=<%= versao %>" alt="">
+        </div>
+        <div class="content">
+            <h1>Logistics & Supply Chain Consulting</h1>
+            <ul>
+                <li>Design and Optimization of Logistics Operations</li>
+                <li>Location of platforms, centers and logistics warehouses</li>
+                <li>Sizing of logistics infrastructures, in technical and human resources</li>
+                <li>Logistics Reengineering and Layout Optimization</li>
+                <li>Implementation of monitoring and control models</li>
+            </ul>
+            <a href="comercial@prolog.ao" class="btn">Request More Information</a>
+        </div>
+
+    </section>
+
+    <section class="direita">
+        <div class="image">
+            <img src="/assets/images/f5.png?v=<%= versao %>" alt="">
+        </div>
+        <div class="content">
+            <h1>Professional Training</h1>
+            <p>Professional Training, certified by "INEFOP" in Logistics and Supply Chain</p>
+            <a href="comercial@prolog.ao" class="btn">Request More Information</a>
+        </div>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

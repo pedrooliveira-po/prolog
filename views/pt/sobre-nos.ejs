@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+    <!-- SEO Title -->
+    <title>
+        Operador Logistico, Consultoria e Formação
+    </title>
+
+    <!-- Meta Description -->
+    <meta name="description"
+        content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+    <!-- Keywords -->
+    <meta name="keywords"
+        content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+    <meta property="og:description"
+        content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+    <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+    <meta property="og:url" content="https://prolog.ao" />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+    <meta name="twitter:description"
+        content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+    <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+    <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+    <link rel="stylesheet" href="/assets/css/sobre-min.css?v=<%= versao %>" />
+    <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://prolog.ao/" />
+
+    <!-- Robots: Instruções para indexação -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+    <link rel="canonical" href="https://prolog.ao">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+
+    <section class="hero"></section>
+
+    <section class="about">
+        <div class="content">
+            <h1>Sobre Nós</h1>
+            <p>A ProLog Soluções, Prestação de Serviços, Lda é uma empresa angolana especializada em logística e
+                prestação de serviços, reconhecida pela sua capacidade de otimizar e simplificar processos logísticos
+                para empresas e organizações em todo o país. Fundada com a visão de transformar os desafios logísticos
+                de Angola em oportunidades, a ProLog ganhou grande visibilidade ao assumir a distribuição de várias
+                redes de lojas de conveniência, mantendo uma rede de distribuição nacional diária e assegurando o
+                abastecimento regular em todo o território.</br></br>
+
+                A empresa é liderada pelo seu fundador e CEO, um profissional experiente e visionário na área da
+                logística, que, ao identificar a necessidade de soluções eficientes no mercado angolano, estabeleceu a
+                ProLog com o compromisso de oferecer um serviço personalizado e de alta qualidade. Sob a sua liderança,
+                a empresa tornou-se uma referência pela abordagem inovadora, desenvolvendo soluções logísticas para
+                regiões remotas e inóspitas do país.</br></br>
+
+                Atualmente, a ProLog conta com uma equipa dedicada de cerca de Quarenta colaboradores, que têm sido o
+                pilar fundamental do crescimento e sucesso da empresa. Estes profissionais comprometidos contribuem
+                diariamente para o alto padrão de serviços que a ProLog oferece, desde a operação até ao atendimento ao
+                cliente. A Administração da ProLog, valoriza o desenvolvimento contínuo das competências desta equipa,
+                investindo em formação e no aperfeiçoamento das suas capacidades, o que posiciona a ProLog também como
+                uma referência no setor de formação em logística em Angola.</br></br>
+
+                Com foco contínuo em inovação e eficiência, a ProLog adapta-se às exigências de um mercado em constante
+                evolução, promovendo melhorias em todas as etapas da cadeia logística e afirmando-se como uma parceira
+                de confiança para empresas que procuram excelência e fiabilidade na logística e na distribuição.</p>
+            <br><br>
+            <h3>A ProLog Soluções, é certificada pelas seguintes Instituições: </h3>
+            <ul>
+                <li>Ministério dos Transportes (licença de transportes de mercadorias)</li>
+
+                <li>Ministério dos Recursos Minerais Petróleo e Gás (certificação de prestadores de serviços para a área
+                    da logística)</li>
+
+                <li>Agência Nacional de Petróleo, Gás e Biocombustíveis (“ANPG”)</li>
+
+                <li>INEFOP (certificação de centro de formação profissional)</li>
+
+                <li>Ministério das Finanças (certificado de fornecedor do estado) </li>
+
+                <li>Detentor da Marca Academia ProLog©</li>
+            </ul></br></br>
+            <p>ProLog Soluções aderiu em 2024 ao Pacto Global das Nações Unidas (UNGC), comprometendo-se com os
+                princípios universais nas áreas de direitos humanos, trabalho, meio ambiente e combate à corrupção. Ao
+                alinharmos os nossos esforços com estes objetivos globais e princípios éticos, contribuímos para um
+                futuro mais sustentável e inclusivo para todos.</p>
+            <center><img src="/assets/images/prologacademia.png?v=<%= versao %> alt=""></center>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+</body>
+
+</html>

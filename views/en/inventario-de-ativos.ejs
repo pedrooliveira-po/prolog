@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Asset Inventory Management
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="ProLog Soluções is a leading company in Angola, offering specialized services in logistics, inventory management, and professional training. Enhance your operation with our innovative solutions." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog solutions, logistics angola, inventory management, logistics services, professional training, logistics, consulting, training, Angola, business solutions, 3PL logistics, 4PL logistics, supply chain, logistics operations">
+
+
+        <!-- Open Graph for social media -->
+        <meta property="og:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta property="og:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="ProLog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="ProLog Soluções LDA - Logistics and Inventory Management Specialists" />
+
+        <meta name="twitter:description"
+            content="Logistics solutions, inventory management, and professional training for companies in Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Internal Links -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/negocio-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instructions for indexing -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (ensures this is the official version of the page) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero"></section>
+
+    <section class="main">
+        <p class="introP" style="text-align: center;"><strong>At ProLog Soluções para Logística</strong>, we understand the vital importance that fixed assets have for any organization. These are the tangible assets that support the daily functioning of businesses, from machinery and equipment to vehicles and facilities. To ensure these assets are properly managed, optimized, and maintained in perfect condition, we offer Fixed Asset Inventory solutions tailored to meet the unique needs of your company.</p>
+        <h2>Why is Fixed Asset Inventory Essential?</h2>
+        <p>Effective management of fixed assets is a critical element for the success and sustainability of organizations. An accurate and up-to-date inventory helps to: <br><br>
+
+            <strong>Reduce Costs:</strong> Identifying underutilized or obsolete assets can result in significant savings.<br><br>
+
+            <strong>Comply with Angolan Regulations:</strong> In compliance with Angolan laws and regulations, many sectors have strict requirements for maintaining asset records.<br><br>
+
+            <strong>Improve Efficiency:</strong> Knowing the location and condition of each asset facilitates optimizing its use.<br><br>
+
+            <strong>Strategic Planning:</strong> Inventory data supports informed decision-making regarding investments and renewals.</p>
+            <h2>Our Services for Fixed Asset Inventory</h2>
+            <p><strong>At ProLog Soluções para Logística</strong>, we offer a comprehensive range of fixed asset inventory services, including:<br><br>
+
+                <strong>Identification and Registration:</strong> We identify and register all assets in your organization, including details such as serial number, location, and condition, through the use of QR or barcode registered labels.<br><br>
+
+                <strong>Condition Assessment:</strong> We assess the condition of each asset to determine if repairs, maintenance, or replacement is needed.<br><br>
+
+                <strong>Tracking and Monitoring:</strong> We implement tracking and monitoring systems through QR/RFID registered labels to follow the movement and use of assets.<br><br>
+
+                <strong>Customized Reports:</strong> We provide detailed reports that can be customized according to your needs and specific regulations.<br><br>
+
+                <strong>Preventive Maintenance:</strong> We help develop preventive maintenance programs to extend the life of your assets.</p>
+
+                <h2>Our Customized Approach</h2>
+
+                <p>We understand that each organization has unique requirements when it comes to fixed asset inventory. We work closely with our clients to develop customized solutions that perfectly fit their operations and objectives.<br><br>
+
+                    <strong>With ProLog Soluções para Logística</strong>, you can be confident that your fixed assets are being managed efficiently and strategically, allowing you to focus on growing your business.<br><br>
+
+                    Contact us today to learn more about our fixed asset inventory services.</p>
+                    <center><a href="mailto:comercial@prolog.ao" class="btn">Request more information</a></center>
+                    <div class="image"><center><img src="/assets/images/inventario.png?v=<%= versao %>" alt=""></center></div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

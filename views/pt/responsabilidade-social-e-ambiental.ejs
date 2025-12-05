@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+        <!-- Google tag (gtag.js) analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-REJ5H0RCBN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-REJ5H0RCBN');
+        </script>
+
+        <!-- SEO Title -->
+        <title>
+            Responsabilidade Social e Ambiental
+        </title>
+
+        <!-- Meta Description -->
+        <meta name="description"
+            content="A Prolog Soluções é uma empresa líder em Angola, oferecendo serviços especializados em logística, gestão de inventários e formação profissional. Potencialize sua operação com nossas soluções inovadoras." />
+
+        <!-- Keywords -->
+        <meta name="keywords"
+            content="prolog soluções, logística angola, gestão de inventários, serviços logísticos, formação profissional, logística, consultoria, formação, Angola, soluções empresariais, logística 3PL, logística 4PL, cadeia de suprimentos, operações logísticas">
+
+
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta property="og:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta property="og:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta property="og:url" content="https://prolog.ao" />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content="Prolog Soluções LDA - Especialistas em Logística e Gestão de Inventários" />
+
+        <meta name="twitter:description"
+            content="Soluções logísticas, gestão de inventários e formação profissional para empresas em Angola." />
+
+        <meta name="twitter:image" content="/assets/images/logo.png?v=<%= versao %>" />
+
+        <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+        <!-- Links Internos -->
+        <link rel="stylesheet" href="/assets/css/menu&footer.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/animacoes-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/css/sobre-min.css?v=<%= versao %>" />
+        <link rel="stylesheet" href="/assets/icons/icons-min.css?v=<%= versao %>" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://prolog.ao/" />
+
+        <!-- Robots: Instruções para indexação -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical URL (garante que esta é a versão oficial da página) -->
+        <link rel="canonical" href="https://prolog.ao">
+    </head>
+
+
+<body>
+    <%- include('partials/header') %>
+
+
+    <section class="hero"></section>
+
+    <section class="nature"></section>
+
+    <section class="responsabilidade">
+        <div class="content">
+            <h1>Responsabilidade Social</h1>
+            <h2>Compromisso com as Comunidades Locais</h2>
+            <p>A ProLog reconhece a importância das comunidades locais e está comprometida em:</p>
+            <ul>
+                <li>Apoiar iniciativas comunitárias.</li>
+                <li>Fomentar o desenvolvimento econômico local.</li>
+                <li>Oferecer oportunidades de emprego e formação.</li>
+            </ul>
+            <h2>Parcerias Sustentáveis</h2>
+            <p>Estabelecemos parcerias com fornecedores e clientes comprometidos com práticas éticas e sociais. Priorizamos relações duradouras que beneficiem todas as partes envolvidas.</p>
+            <h1>Responsabilidade Ambiental</h1>
+            <h2>Eficiência Energética</h2>
+            <p>Investimos em tecnologias e práticas que reduzem o consumo de energia em nossas operações, minimizando nosso impacto ambiental.</p>
+            <h2>Gestão de Resíduos</h2>
+            <p>Adotamos políticas rigorosas de gestão de resíduos, priorizando a reciclagem e a redução do desperdício em todas as etapas da nossa cadeia de abastecimentos.</p>
+            <h2>Transporte Sustentável</h2>
+            <p>Implementamos estratégias para otimizar rotas, reduzir emissões e promover a utilização de modos de transporte mais sustentáveis.</p>
+            <h1>Compromisso Contínuo</h1>
+            <p>Na ProLog Soluções para Logistica, reconhecemos que a responsabilidade social e ambiental é um compromisso contínuo. Estamos constantemente avaliando e ajustando nossas práticas para melhorar nosso desempenho e contribuir para um futuro mais sustentável.<br><br>
+            A ProLog Soluções para Logística não é apenas uma provedora de serviços logísticos; somos impulsionados pela responsabilidade social e ambiental. Ao escolher a ProLog, a sua empresa está optando por uma parceria que valoriza a eficiência, a inovação e a contribuição para um mundo melhor.<br><br>
+            Estamos ansiosos para discutir como a ProLog pode atender às suas necessidades logísticas de maneira sustentável e socialmente responsável.</p>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+
+    </body>
+</html>

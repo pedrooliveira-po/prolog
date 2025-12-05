@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <% cssLinksCentralizados.forEach(link => { %>
+        <link rel="stylesheet" href="<%= link %>">
+    <% }) %>
+
+    <!-- SEO and Metadata -->
+    <title>
+      Prolog Soluções LDA - Logistics and Inventory Management Specialists in Angola
+    </title>
+    <meta
+      name="description"
+      content="Prolog Soluções is a leading company in Angola, offering specialized services in logistics, inventory management and professional training. Enhance your operation with our innovative solutions."
+    />
+    <meta
+      name="keywords"
+      content="prolog solutions, logistics angola, inventory management, logistics services, professional training, logistics, consulting, training, Angola, business solutions, 3PL logistics, 4PL logistics, supply chain, logistics operations"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_AO" />
+    <meta property="og:country-name" content="Angola" />
+    <meta
+      property="og:title"
+      content="Prolog Soluções LDA - Logistics and Inventory Management Specialists"
+    />
+    <meta
+      property="og:description"
+      content="Logistics solutions, inventory management and professional training for companies in Angola."
+    />
+    <meta
+      property="og:image"
+      content="/assets/images/logo.png?v=<%= versao %>"
+    />
+    <meta property="og:url" content="https://www.prolog.ao" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Prolog Soluções LDA" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Prolog Soluções LDA - Logistics and Inventory Management Specialists"
+    />
+    <meta
+      name="twitter:description"
+      content="Logistics solutions, inventory management and professional training for companies in Angola."
+    />
+    <meta
+      name="twitter:image"
+      content="/assets/images/logo.png?v=<%= versao %>"
+    />
+    <meta name="twitter:site" content="@prolog_solucoes_lda" />
+
+    <!-- Additional Metatags -->
+    <meta name="dcterms.language" content="en" />
+    <meta name="geo.region" content="AO" />
+    <meta name="geo.placename" content="Angola" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prolog.ao" />
+
+    <!-- Google tag (gtag.js) analytics -->
+    <script
+      defer
+      src="/assets/js/googleTagManager.js"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-REJ5H0RCBN");
+    </script>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/css/menu&footerHome.css?v=<%= versao %>"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/icons/icons-min.css?v=<%= versao %>"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css?v=<%= versao %>" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <%- include('header') %>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="hero"
+      aria-labelledby="hero-title"
+    >
+      <div class="hero-content">
+        <h1 id="hero-title">
+          ProLog Solutions for Logistics
+        </h1>
+        <p>
+          We are ProLog Solutions, specialists in integrated logistics operations in Angola. We offer convenience store retail management services as well as Third Party Logistics ("3PL"), Fourth Party Logistics ("4PL") and Fifth Party Logistics ("5PL") operations, national distribution, inventory management and logistics support, always focused on efficiency, profitability and innovation. With over 25 years of experience, we design, implement and operationalize solutions adapted to the needs of the national market.
+        </p>
+        <br />
+        <a
+          href="mailto:info@prolog.ao"
+          class="btn btn-primary"
+          aria-label="Schedule meeting about logistics solutions"
+        >
+          Consult Our Specialists
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Banner -->
+    <div id="banner" class="py-16 px-4 max-w-7xl mx-auto">
+      <div class="relative">
+        <div class="bg-gradient rounded-3xl p-8 shadow-2xl">
+          <img
+            src="/assets/images/banner.png"
+            alt="Prolog Solutions banner detailing business areas such as 3PL, 4PL and 5PL, competitive advantages and certifications."
+            class="w-full h-auto rounded-2xl shadow-lg transition-transform duration-500"
+            loading="lazy"
+          />
+
+          <div class="badge">
+            <div class="text-center">
+              <div class="text-prolog-blue font-bold text-sm">3PL</div>
+              <div class="text-prolog-orange font-bold text-sm">4PL</div>
+              <div class="text-gray-600 font-bold text-sm">5PL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background Decorations -->
+        <div class="bg-decoration"></div>
+      </div>
+    </div>
+
+    <!-- Academy Section -->
+    <section
+      id="academia"
+      class="py-16 bg-white"
+      aria-labelledby="academia-title"
+    >
+      <div class="container grid gap-12 items-center">
+        <!-- Image Column -->
+        <div class="order-1">
+          <img
+            src="/assets/images/s4.webp"
+            alt="Logistics professional providing training to a team at ProLog Academy"
+            class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Text Column -->
+        <div class="order-2 text-gray-800">
+          <h2 id="academia-title">
+            Train the Professionals Who Will Move Tomorrow.
+          </h2>
+          <p>
+            Discover the <strong>ProLog Academy</strong>, our professional training center specialized in Logistics and Supply Chain.
+          </p>
+          <ul>
+            <li>Practical courses with real scenarios.</li>
+            <li><strong>Official certification by Inefop and ANPG.</strong></li>
+            <li>Trainers with extensive experience in the Angolan market.</li>
+          </ul>
+          <a
+            href="https://academiaprolog.ao"
+            class="btn btn-orange"
+          >
+            Explore the Academy
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="servicos"
+      class="services"
+      aria-labelledby="services-title"
+    >
+      <h2 id="services-title">
+        Specialized Integrated Logistics Services
+      </h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img
+            src="/assets/images/f2.webp?v=<%= versao %>"
+            alt="Contract Logistics Services"
+            loading="lazy"
+          />
+          <h3>
+            3PL, 4PL and 5PL Logistics Operations
+          </h3>
+          <p>Convenience store retail management</p>
+          <br />
+          <a
+            href="/logistica-e-gestao-de-lojas-de-conveniencia"
+            class="btn btn-primary"
+            aria-label="Details of logistics services"
+          >
+            Explore Our Solutions
+          </a>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="/assets/images/bg7.webp?v=<%= versao %>"
+            alt="Logistics Support for Environmental Studies"
+            loading="lazy"
+          />
+          <h3>
+            Field Logistics Operations
+          </h3>
+          <br />
+          <a
+            href="/operacoes-logisticas-de-campo"
+            class="btn btn-primary"
+            aria-label="Learn more about Field Logistics Operations"
+          >
+            View Operation Details
+          </a>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="/assets/images/s3.webp?v=<%= versao %>"
+            alt="Advanced Inventory and Asset Management"
+            loading="lazy"
+          />
+          <h3>
+            Inventory Management Outsourcing
+          </h3>
+          <br />
+          <a
+            href="/inventarios-de-activos-patrimoniais"
+            class="btn btn-primary"
+            aria-label="Inventory management details"
+          >
+            Optimize Your Assets
+          </a>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="/assets/images/s4.webp?v=<%= versao %>"
+            alt="Professional Training in Logistics"
+            loading="lazy"
+          />
+          <h3>
+            Professional Training Academy in Logistics
+          </h3>
+          <br />
+          <a
+            href="/academia-prolog"
+            class="btn btn-primary"
+            aria-label="Training information"
+          >
+            Develop Your Team
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="noticias" class="blog-posts">
+      <div class="container">
+        <h2>Latest News</h2>
+        <div class="posts-container" id="blogPosts">
+          <div class="loading">
+            Loading posts...
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="company-videos">
+      <h2>
+        Corporate Videos
+      </h2>
+      <div class="videos-container">
+        <div class="video-item">
+          <video width="100%" height="auto" controls preload="metadata">
+            <source
+              src="/assets/videos/prologTeaser1.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video.
+          </video>
+        </div>
+        <div class="video-item">
+          <video width="100%" height="auto" controls preload="metadata">
+            <source
+              src="/assets/videos/prologTeaser2.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video.
+          </video>
+        </div>
+        <div class="video-item">
+          <video width="100%" height="auto" controls preload="metadata">
+            <source
+              src="/assets/videos/prologComplete.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section
+      id="visao"
+      class="vision"
+    >
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>
+          *We Design <br />
+          *We Implement <br />
+          *We Operationalize
+        </h2>
+        <p>
+          We design, implement and operationalize innovative and efficient solutions for convenience store retail management, 3PL, 4PL and 5PL logistics operations and distribution networks, Stock and Asset Inventory Management, Logistics Platforms and Warehouses Management, and Supply Chain Management.
+        </p>
+        <br />
+        <a
+          href="mailto:info@prolog.ao"
+          class="btn btn-primary"
+        >
+          Schedule a meeting with us
+        </a>
+      </div>
+    </section>
+
+    <!-- Optimized Partners Section -->
+    <section id="parceiros" class="partners">
+      <h2>Our Partners and Clients</h2>
+      <div class="carousel-container">
+        <div class="carousel-track" id="partnersCarousel"></div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section
+      id="intro"
+      class="intro animate-slider"
+    >
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>
+          Enhance your company's logistics
+        </h2>
+        <p>
+          ProLog Solutions is a partner with a wide range of logistics solutions and can guide you through the entire process. Together, we will find a service configuration that is optimized for your company.
+        </p>
+        <br />
+        <a
+          href="mailto:comercial@prolog.ao"
+          class="btn btn-primary"
+        >
+          More Information
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contacto"
+      id="contact"
+      class="contact"
+    >
+      <div class="overlay"></div>
+      <div class="contact-container">
+        <div class="contact-form">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="contactForm"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="076c87bb-957b-4231-89a7-99a7f5c48998"
+            />
+
+            <div class="form-group">
+              <label for="nome">Name</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Phone</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="informacao">What information are you looking for?</label>
+              <select
+                id="informacao"
+                name="informacao"
+                required
+                class="form-control"
+              >
+                <option value="" selected disabled></option>
+                <option value="consultoria">Consulting</option>
+                <option value="formacao">Professional Training</option>
+                <option value="outsourcing">Service Outsourcing</option>
+                <option value="entregas">Express Deliveries</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Message</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                required
+                class="form-control"
+              ></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button
+                type="submit"
+                class="submit-btn"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h2>Contact us.</h2>
+          <address>
+            <p>
+              Benfica Business Park (Avenida comandante Fidel de Castro) / Luanda
+            </p>
+            <p>
+              Tel:
+              <a
+                href="tel:+244930981759"
+              >+244 930 981 759</a>
+            </p>
+            <p>
+              <a
+                href="https://prolog.ao"
+              >https://prolog.ao</a>
+            </p>
+            <p>
+              <a
+                href="mailto:info@prolog.ao"
+              >info@prolog.ao</a>
+            </p>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.3146191515784!2d13.162788510050213!3d-8.943128391077765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x492a835ca231557b%3A0x13c0771fe33af3d6!2zUHJvbG9nIFNvbHXDp8O1ZXMgTGRh!5e0!3m2!1spt-PT!2sao!4v1731056924284!5m2!1spt-PT!2sao"
+                title="Prolog Solutions Location"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </address>
+        </div>
+        <div class="whatsapp-button">
+          <a
+            href="https://wa.me/244930981759"
+            target="_blank"
+            aria-label="Contact via WhatsApp"
+          >
+            <img
+              src="/assets/images/icon_whatsapp.svg"
+              alt="WhatsApp"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <%- include('footer') %>
+
+    <!-- Scripts -->
+    <script src="/assets/js/script.js?v=<%= versao %>"></script>
+    <script src="/assets/js/noticias.js?v=<%= versao %>"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        function loadPartners() {
+          const carousel = document.getElementById("partnersCarousel");
+          const partners = [
+            "parceiro1.webp",
+            "parceiro2.webp",
+            "parceiro3.webp",
+            "parceiro4.webp",
+            "parceiro6.webp",
+            "parceiro7.webp",
+            "parceiro9.webp",
+            "parceiro10.webp",
+            "parceiro11.webp",
+            "parceiro12.webp",
+            "parceiro13.webp",
+            "parceiro14.webp",
+          ];
+
+          let partnersHTML = "";
+          partners.forEach((partner) => {
+            partnersHTML += `
+                        <div class="carousel-item flex-shrink-0 w-[150px] h-[150px] flex items-center justify-center">
+                            <img src="/assets/images/parceiros/${partner}?v=<%= versao %>" 
+                                 alt="Partner" 
+                                 loading="lazy" 
+                                 class="w-full h-full object-contain" />
+                        </div>
+                    `;
+          });
+
+          carousel.innerHTML = partnersHTML + partnersHTML;
+        }
+
+        loadPartners();
+      });
+    </script>
+  </body>
+</html>
