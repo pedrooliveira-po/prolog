@@ -13,7 +13,7 @@ const enRouter = require("./router/en");
 const conexao = require("./config/db");
 const Acesso = require("./models/acessos");
 
-/* ========================== CONEXÃO E SINCRONIZAÇÃO COM O BANCO DE DADOS ========================== */
+/* ========================== CONEXÃO E SINCRONIZAÇÃO COM O BANCO DE DADOS ========================== 
 
 conexao
   .authenticate()
@@ -25,7 +25,7 @@ conexao
 conexao
   .sync({ alter: false })
   .then(() => console.log("Tabelas sincronizadas com sucesso!"))
-  .catch((erro) => console.error("Erro ao sincronizar Tabelas: " + erro));
+  .catch((erro) => console.error("Erro ao sincronizar Tabelas: " + erro));*/
 
 const app = express();
 const port = process.env.PORT || 3952;
@@ -49,6 +49,7 @@ app.locals.jsLinksCentralizados = [
 /* ========================== MIDDLEWARES ========================== */
 
 // Middleware para registrar visitas
+/*
 async function adicionarVisita(req, res, next) {
   if (
     req.path.match(
@@ -146,7 +147,7 @@ async function adicionarVisita(req, res, next) {
   next();
 }
 
-app.use(adicionarVisita);
+app.use(adicionarVisita); */ 
 
 /* ========================== ROTAS ========================== */
 
