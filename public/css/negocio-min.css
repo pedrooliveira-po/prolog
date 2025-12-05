@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  overflow-x: hidden;
+  color: #000;
+}
+i {
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+i:hover {
+  color: #ff6b00;
+}
+.btn {
+  background: #ff6b00;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background: #ffa600;
+}
+.esquerda,
+.direita {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 5%;
+}
+.esquerda h1,
+.direita h1 {
+  font-size: xx-large;
+}
+.esquerda p,
+.direita p {
+  font-size: large;
+}
+.esquerda .image {
+  order: 1;
+  max-width: 50%;
+}
+.esquerda .content {
+  order: 2;
+  padding-left: 20px;
+}
+.esquerda p,
+.direita p {
+  margin: 5% 0;
+}
+.direita .image {
+  order: 2;
+  max-width: 50%;
+}
+.direita .content {
+  order: 1;
+  padding-right: 20px;
+}
+.image img {
+  max-width: 500px;
+  border-radius: 20px;
+  aspect-ratio: 16 / 9;
+}
+ul {
+  padding: 3%;
+}
+.main {
+  padding: 5%;
+  background-color: #f5f5f5;
+}
+.main .introP {
+  font-size: larger;
+}
+.main h2 {
+  margin: 3%;
+  text-align: center;
+}
+.main a {
+  margin: 5% 0 7%;
+}
+.main .image {
+  width: 100%;
+}
+.main img {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+.logisticaInfo {
+  background-image: url("../images/f2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 5%;
+  background-color: #030e4f;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logisticaInfo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+.logisticaInfo .content {
+  width: 80%;
+  z-index: 10;
+  position: relative;
+  color: #000;
+}
+.logisticaInfo .content h2 {
+  margin: 10px 0;
+}
+.logisticaInfo a {
+  color: #000;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+}
+.direita.stock img {
+  aspect-ratio: 9 / 16;
+}
+.direita.stock h1,
+.direita.stock h2 {
+  margin: 5% 0;
+}
+.direita.stock ul {
+  list-style: none;
+}
+.main.stock h2 {
+  margin: 3% 0;
+  text-align: left;
+}
+.main.stock h3 {
+  margin: 3% 0;
+  text-align: left;
+}
+.esquerda.academia img {
+  aspect-ratio: 1 / 1;
+}
+.direita.academia h2 {
+  margin: 5%;
+}
+.contact {
+  background-image: url("../images/fundo3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(240, 100%, 6%, 0.4);
+  z-index: 1;
+}
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+.contact-form {
+  padding: 30px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+.form-control {
+  background-color: #4747478a;
+  border-radius: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+.submit-btn {
+  background-color: #ff6b00;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.submit-btn:hover {
+  background-color: #081663;
+}
+.contact-info {
+  color: #fff;
+}
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.contact-info address {
+  font-style: normal;
+  line-height: 1.8;
+}
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.contact-info a:hover {
+  color: #ff6b00;
+}
+.contact-info img {
+  max-width: 300px;
+}
+.map-container {
+  width: 100%;
+  height: 300px;
+}
+.map-container iframe {
+  margin: 3% 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  transition: transform 0.5s ease-in-out;
+  z-index: 10;
+}
+.whatsapp-button img {
+  width: 50px;
+  height: 50px;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+.recrutamento {
+  position: relative;
+  padding: 4rem 2rem;
+  background-image: url("../images/fundo8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: 100vh;
+}
+.recrutamento::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #030e4f80;
+  z-index: 1;
+}
+.recrutamento > * {
+  position: relative;
+  z-index: 2;
+}
+.recrutamento .content {
+  text-align: center;
+  max-width: 80%;
+}
+.recrutamento h2 {
+  font-size: xxx-large;
+  margin-bottom: 2rem;
+}
+.recrutamento p {
+  font-size: 1.5rem;
+}
+.vagas {
+  background-color: #030e4f;
+  color: #fff;
+  padding: 3%;
+  min-height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vagas h1 {
+  margin: 5% 0;
+  color: #ff6b00;
+  font-size: xx-large;
+}
+.vagas h2 {
+  margin: 5% 0;
+  font-size: x-large;
+}
+.vagas h3 {
+  margin: 5% 0;
+  font-size: larger;
+}
+.vagas p {
+  margin: 5% 0;
+  font-size: large;
+}
+.vagas a {
+  margin: 5% 0;
+  color: #fff;
+  font-size: large;
+}
+@media (max-width: 768px) {
+  .esquerda,
+  .direita {
+    flex-direction: column;
+  }
+  .esquerda .image,
+  .direita .image {
+    order: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .esquerda .image img,
+  .direita .image img {
+    width: 100%;
+  }
+  .esquerda .content,
+  .direita .content {
+    order: 1;
+    padding: 0;
+  }
+  .direita.academia .image {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+  .direita.academia .content {
+    order: 0;
+    padding: 0;
+  }
+  .main h2 {
+    margin: 10% 0;
+    text-align: center;
+  }
+  .logisticaInfo .content {
+    width: 90%;
+  }
+  .contact-info h2 {
+    font-size: 1.75rem;
+  }
+  .contact-info address {
+    font-size: 1.25rem;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .about .content {
+    width: 80%;
+    margin: 10%;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .missao .content {
+    width: 80%;
+    margin: 10%;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main {
+    padding: 5% 10% 5%;
+  }
+  .logisticaInfo {
+    padding: 10%;
+  }
+}

@@ -1,0 +1,596 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #030e4f;
+    overflow-x: hidden;
+    color: #fff;
+
+}
+
+i {
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+i:hover {
+    color: #ff6b00;
+}
+
+.btn {
+    background: #ff6b00;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    background: #ffa600;
+}
+
+/* Header */
+header {
+    position: fixed;
+    background-color: rgba(3, 14, 79, 0.9);
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    width: 50%;
+    max-width: 300px;
+    transition: all 1s ease;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(3, 14, 79, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+nav * {
+    display: none;
+}
+
+nav.open {
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+}
+
+nav.open * {
+    display: flex;
+}
+
+/* Estilo do botão fechar */
+.close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Estilo do botão voltar */
+.back-btn {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.back-btn:hover {
+    color: #ff6b00;
+}
+
+/* Estilo da navegação principal */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.nav-menu > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ff6b00;
+}
+
+/* Estilo dos submenus */
+.submenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(3, 14, 79, 0.95);
+    padding: 2rem;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+}
+
+.submenu.active {
+    transform: translateX(0);
+    opacity: 1;
+    display: flex;
+}
+
+.submenu li a {
+    margin: 10px;
+}
+
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 1s ease;
+}
+
+.hamburguer {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.hamburguer span {
+    background-color: #f5f5f5;
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    border-radius: 10px;
+    transition: transform 1s ease, background-color 0.4s ease, top 0.4s ease;
+}
+
+#linha1 {
+    top: 0;
+}
+
+#linha2 {
+    top: 10px;
+}
+
+#linha3 {
+    top: 20px;
+    width: 70%;
+}
+
+.hamburguer.open #linha1 {
+    transform: rotate(225deg);
+    top: 10px;
+    background-color: #ff6b00;
+}
+
+.hamburguer.open #linha2 {
+    background-color: #ff6b00;
+    transform: rotate(-225deg);
+}
+
+.hamburguer.open #linha3 {
+    transform: rotate(-405deg);
+    top: 10px;
+    width: 100%;
+    background-color: #ff6b00;
+}
+
+.social-links {
+    position: absolute;
+    bottom: 3%;
+}
+
+.social-links a {
+    margin: 2px
+}
+
+.hero {
+    min-height: 20dvh;
+}
+
+.about {
+    min-height: 100vh;
+    background-image: url('../images/fundo4.jpg');
+    background-repeat: no-repeat;background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    color: white;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(3, 14, 79, 0.5);
+    z-index: 1;
+}
+
+.about .content {
+    width: 90%;
+    margin: 5%;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .content h1 {
+    font-size: xx-large;
+}
+
+.about .content p {
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.about .content ul li {
+    margin: 5% 0;
+}
+
+.about .content ul {
+    padding: 0 5%;
+}
+
+.about .content img {
+    max-width: 300px;
+}
+
+.missao {
+    min-height: 100vh;
+    background-image: url('../images/fundo5.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Centraliza o conteúdo verticalmente */
+    padding: 2rem;
+    color: white;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+.missao::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(3, 14, 79, 0.5); /* Sobreposição translúcida */
+    z-index: 1;
+}
+
+.missao .content {
+    width: 90%;
+    z-index: 2; /* Mantém o conteúdo acima da sobreposição */
+    display: flex; /* Flexbox para estruturação interna */
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.missao .content h1 {
+    font-size: 2rem; /* Tamanho ajustado */
+    margin: 20px 0;
+}
+
+.missao .content p {
+    margin: 20px 0;
+    z-index: 2; /* Garante que esteja acima da sobreposição */
+}
+
+.missao #valores {
+    text-align: center;
+}
+
+.imagem {
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.imagem img {
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.nature {
+    min-height: 100vh;
+    background-image: url('../images/fundo6.webp');
+    background-repeat: no-repeat;background-size: cover;
+    background-position: center;
+}
+
+.responsabilidade {
+    min-height: 100vh;
+    background-image: url('../images/fundo7.jpeg');
+    background-repeat: no-repeat;background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    color: #000;
+}
+
+.responsabilidade::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.719);
+    z-index: 1;
+}
+
+.responsabilidade .content {
+    width: 90%;
+    margin: 5%;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.responsabilidade .content h1 {
+    font-size: xx-large;
+    margin: 5% 0;
+}
+
+.responsabilidade .content p {
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.responsabilidade ul {
+    padding: 0 5%;
+}
+
+.responsabilidade .content ul li {
+    margin: 3% 0;
+}
+
+
+
+footer {
+    background: linear-gradient(135deg, #001547, #002B6E); /* Gradiente de fundo */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    background-color: #ff6b00;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer-links {
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #fff; 
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold; 
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9c3e;
+}
+
+.footer-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ff6b00;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.4s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.social-link {
+    margin-bottom: 30px;
+}
+
+.social-link a {
+    color: #ff6b00;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link a:hover {
+    color: #ff9c3e;
+    transform: scale(1.2);
+}
+
+.social-link i {
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+footer p {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100dvw;
+        padding: 10px;
+    }
+
+    .hero {
+        min-height: 15dvh;
+    }
+    
+    .logo {
+        width: 50%;
+        max-width: 300px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    .nav-menu > li > a {
+        font-size: 1.25rem;
+    }
+    
+    .submenu li a {
+        font-size: 1rem;
+    }
+
+    .missao .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    footer {
+        padding: 30px 15px;
+        font-size: 13px;
+    }
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .social-link {
+        margin-bottom: 20px;
+    }
+
+    .social-link a {
+        margin: 0 8px;
+    }
+
+    .social-link i {
+        font-size: 24px;
+    }
+
+    footer p {
+        margin-top: 20px;
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        width: 35%;
+        height: 100vh;
+    }
+
+    .about .content {
+        width: 80%;
+        margin: 10%;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .missao .content {
+        width: 80%;
+        margin: 10%;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
